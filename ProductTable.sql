@@ -3,6 +3,7 @@
 CREATE TABLE product
 (
   id uuid NOT NULL,
+  description text NOT NULL DEFAULT 'None',
   lookupcode character varying(255) NOT NULL DEFAULT '???'::character varying,
   price real NOT NULL DEFAULT -1.00,
   itemtype integer NOT NULL DEFAULT -1,
