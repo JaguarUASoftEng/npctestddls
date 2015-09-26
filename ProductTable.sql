@@ -14,7 +14,7 @@ CREATE TABLE product
   parentitem integer NOT NULL DEFAULT 0,
   extendeddescription text NOT NULL DEFAULT 'None',
   active integer NOT NULL DEFAULT 1,
-  msrp integer NOT NULL DEFAULT 1,
+  msrp real NOT NULL DEFAULT 1,
   createdon timestamp without time zone NOT NULL DEFAULT now(),
   CONSTRAINT product_pkey PRIMARY KEY (id)
 )
