@@ -1,8 +1,8 @@
-﻿-- Table: "transactionentry table"
+﻿-- Table: "transactionentry"
 
--- DROP TABLE "transactionentry table";
+-- DROP TABLE "transactionentry";
 
-CREATE TABLE "transactionentry table"
+CREATE TABLE "transactionentry"
 (
   "Transaction ID" bigint,
   "Product ID" bigint,
@@ -14,5 +14,5 @@ CREATE TABLE "transactionentry table"
 WITH (
   OIDS=FALSE
 );
-ALTER TABLE "transactionentry table"
+ALTER TABLE "transactionentry"
   OWNER TO npcorg;
