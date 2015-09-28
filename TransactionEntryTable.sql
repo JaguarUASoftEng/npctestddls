@@ -15,4 +15,4 @@ WITH (
   OIDS=FALSE
 );
 ALTER TABLE "transactionentry table"
-  OWNER TO postgres;
+  OWNER TO npcorg;
