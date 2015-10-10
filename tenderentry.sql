@@ -5,7 +5,7 @@
 CREATE TABLE tenderentry
 (
   id uuid NOT NULL,
-  transaction_id integer NOT NULL,
+  transaction_id uuid NOT NULL,
   tender_type text NOT NULL DEFAULT 'None',
   amount Double Precision NOT NULL DEFAULT -1.00,
   createdon timestamp without time zone NOT NULL DEFAULT now(),

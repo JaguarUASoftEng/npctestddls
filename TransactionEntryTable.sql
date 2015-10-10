@@ -4,9 +4,9 @@
 
 CREATE TABLE "transactionentry"
 (
-  "Transaction ID" integer NOT NULL,
+  "Transaction ID" uuid NOT NULL,
   "Product ID" uuid NOT NULL,
-  "Record ID" integer NOT NULL,
+  "Record ID" uuid NOT NULL,
   "Price" double precision NOT NULL,
   "Quantity" integer NOT NULL,
   CONSTRAINT "PK_recordID" PRIMARY KEY ("Record ID"),
