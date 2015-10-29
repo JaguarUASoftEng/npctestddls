@@ -15,7 +15,7 @@ CREATE TABLE transaction
 	R_ID INTEGER PRIMARY KEY,
 	C_ID INTEGER,
 	amount INTEGER,
-	type VAR CHAR(256) CHECK (type IN ('sale','return','void')),
+	transactiontype VAR CHAR(256) CHECK (type IN ('sale','return','void')),
 	createdon timestamp without time zone NOT NULL DEFAULT now(),
 	FOREIGN KEY (C_ID) REFERENCES employee (ID)
 	--P_ID INTEGER
