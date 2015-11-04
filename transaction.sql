@@ -12,15 +12,14 @@
 
 CREATE TABLE transaction
 (
-	R_ID INTEGER PRIMARY KEY,
-	C_ID INTEGER,
-	amount INTEGER,
-	transactiontype VAR CHAR(256) CHECK (type IN ('sale','return','void')),
+	R_ID uuid PRIMARY KEY,
+	C_ID uuid,
+	P_ID uuid,
+	amount double precision,
+	transactiontype VARCHAR(256) CHECK (transactiontype IN ('sale','return','void')),
 	createdon timestamp without time zone NOT NULL DEFAULT now(),
-	FOREIGN KEY (C_ID) REFERENCES employee (ID)
-	--P_ID INTEGER
-	--FOREIGN KEY (P_D) REFERENCES 
-	--Not sure how use a foreign key to reference another record on the same table
+	FOREIGN KEY (C_ID) REFERENCES employee (record_id),
+	FOREIGN KEY (P_ID) REFERENCES transaction (R_ID)
 )
 WITH (
   OIDS=FALSE
