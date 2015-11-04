@@ -11,7 +11,7 @@ CREATE TABLE "transactionentry"
   "Quantity" integer NOT NULL,
   CONSTRAINT "PK_recordID" PRIMARY KEY ("Record ID"),
   CONSTRAINT "FK_productID" FOREIGN KEY ("Product ID") REFERENCES product ("id"),
-  CONSTRAINT "FK_transactionID" FOREIGN KEY ("Transaction ID") REFERENCES transaction ("Transaction ID")
+  CONSTRAINT "FK_transactionID" FOREIGN KEY ("Transaction ID") REFERENCES transaction ("r_id")
 )
 WITH (
   OIDS=FALSE
