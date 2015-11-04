@@ -11,7 +11,7 @@ CREATE TABLE tenderentry
   createdon timestamp without time zone NOT NULL DEFAULT now(),
   CONSTRAINT id_pkey PRIMARY KEY (id),
   CONSTRAINT transactionID_fkey FOREIGN KEY (transaction_id)
-  REFERENCES transactionentry("Transaction ID")
+  REFERENCES transaction("r_id")
 )
 WITH
 (
